@@ -1,8 +1,6 @@
 body {
   margin: 0;
   max-width: 100vw;
-    border: 3px dashed #ffbaf5;
-
 }
 
 main {
@@ -20,22 +18,23 @@ header {
   background-repeat: repeat;
 }
 
-header img:hover{
-    content: url(../assets/mugshot-hover.png);
+header img:hover {
+  content: url(../assets/mugshot-hover.png);
 }
 
 #overMij {
   background-color: #ffbaf5;
   height: 100%;
-  color: #ffff;
+  color: #baffc3;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-row: 1fr 1fr;
+  grid-template-rows: auto auto auto;
   padding-left: 50px;
 }
 
 #overMij h2 {
   font: bold 40px/1 sans-serif;
+    grid-column: 1 / 2;
 }
 
 #paragraaf1 {
@@ -55,13 +54,13 @@ header img:hover{
 }
 
 #mijnDoelen {
+  background-color: #baffc3;
   height: 100%;
   color: #ffbaf5;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.25fr 0.25fr;
+  grid-template-rows: 50px auto auto;
   padding-right: 50px;
-  border-top: 3px dashed #ffbaf5;
 }
 
 #mijnDoelen h2 {
@@ -85,14 +84,28 @@ header img:hover{
   height: 80%;
 }
 
-ol{
+ol {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  align-self: center;
+  align-self: start;
   font: 20px/1 sans-serif;
 }
 
-footer{
-  height: 100px;
-    border-top: 3px dashed #ffbaf5;
+footer {
+  background-color: #ffbaf5;
+  color: #baffc3;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font: 15px/1 sans-serif;
+  height: 50px;
 }
+
+footer a{
+    text-decoration: none;
+    color: #baffc3;
+}
+
+footer a:hover{
+text-decoration: wavy overline #ffbaf5;}
