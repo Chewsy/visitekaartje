@@ -1,9 +1,29 @@
-/* Stap 1: Selecteer de knop */
-let expandButton = document.querySelector('.profile-card-example-button')
+let mugshot = document.querySelector('#mugshot')
 
-/* Stap 2: Wacht tot iemand op die knop klikt */
-expandButton?.addEventListener('click', function() {
+let keerGeklikt = 0
 
-  /* Stap 3: Verander een class zodra iemand op die knop klikt */
-  document.body.classList.toggle('is-expanded')
-})
+function updateMugshot() {
+  keerGeklikt++
+
+  switch (keerGeklikt) {
+    case 1:
+      mugshot.src = "./assets/mugshot-1.png"
+      break
+    case 2:
+      mugshot.src = "./assets/mugshot.png"
+      break
+    case 3:
+      mugshot.src = "./assets/mugshot-3.png"
+      break
+    case 4:
+      mugshot.src = "./assets/mugshot-4.png"
+      break
+    case 5:
+      mugshot.src = "./assets/mugshot-5.png"
+      break
+    default:
+      mugshot.src = "./assets/mugshot.png"
+  }
+}
+
+mugshot?.addEventListener('click', updateMugshot)
